@@ -34,7 +34,7 @@ repositories {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-aop")
 
-    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb")
     compile("org.springframework.boot:spring-boot-starter-web")
 
     compile("org.codehaus.groovy:groovy-all:2.4.1")
