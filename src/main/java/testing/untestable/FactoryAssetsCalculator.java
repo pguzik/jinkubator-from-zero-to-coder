@@ -29,7 +29,7 @@ public class FactoryAssetsCalculator {
         return value;
     }
 
-    public void addFund(FactoryAssets asset) {
+    public void addAsset(FactoryAssets asset) {
         assets.add(asset);
     }
 }

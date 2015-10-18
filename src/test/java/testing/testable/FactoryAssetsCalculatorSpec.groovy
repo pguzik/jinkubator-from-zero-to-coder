@@ -9,7 +9,7 @@ class FactoryAssetsCalculatorSpec extends Specification {
     private final static BigDecimal VALUE_A = new BigDecimal(900);
     private final static BigDecimal VALUE_B = new BigDecimal(200);
 
-    def "should calculate funds value" () {
+    def "should calculate assets value" () {
         given:
             FactoryAssetsCalculator assetsCalculator = new FactoryAssetsCalculator()
             OOFactoryAssets PLAssets = Stub();
@@ -19,8 +19,8 @@ class FactoryAssetsCalculatorSpec extends Specification {
             PLAssets.getValue() >> VALUE_A
             USAssets.getValue() >> VALUE_B
 
-            assetsCalculator.addFund(PLAssets);
-            assetsCalculator.addFund(USAssets);
+            assetsCalculator.addAsset(PLAssets);
+            assetsCalculator.addAsset(USAssets);
 
         then:
             assetsCalculator.valueOfAllAssets == VALUE_A.add(VALUE_B)

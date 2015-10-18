@@ -24,7 +24,7 @@ public class FactoryAssetsCalculator {
         return value;
     }
 
-    public void addFund(OOFactoryAssets asset) {
+    public void addAsset(OOFactoryAssets asset) {
         assets.add(asset);
     }
 }

@@ -15,7 +15,7 @@ class FactoryAssetsCalculatorSpec extends Specification {
     private BigDecimal ASSETS_PL_VALUE = new BigDecimal(3);
     private BigDecimal ASSETS_US_VALUE = new BigDecimal(2);
 
-    def "should calculate funds value" () {
+    def "should calculate assets value" () {
         given:
             FactoryAssetsCalculator assetsCalculator = new FactoryAssetsCalculator()
             FactoryAssets hammerAssets = Stub()
@@ -40,8 +40,8 @@ class FactoryAssetsCalculatorSpec extends Specification {
             currentValueA.getValue() >> ASSETS_PL_VALUE
             currentValueB.getValue() >> ASSETS_US_VALUE
         when:
-            assetsCalculator.addFund(hammerAssets);
-            assetsCalculator.addFund(spoonAssets);
+            assetsCalculator.addAsset(hammerAssets);
+            assetsCalculator.addAsset(spoonAssets);
         then:
             assetsCalculator.valueOfAllAssets == BigDecimal.valueOf(31)
     }
